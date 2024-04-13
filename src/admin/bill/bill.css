@@ -1,0 +1,10 @@
+.billpage_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bill{
+    width: 1200px;
+    height: 800px;
+}

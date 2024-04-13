@@ -1,0 +1,11 @@
+.layout{
+  background-color: #cbedf4;
+}
+.side_pagecontent {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;;
+
+  margin: 15px;
+}
