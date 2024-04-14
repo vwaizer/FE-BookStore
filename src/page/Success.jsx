@@ -6,7 +6,8 @@ import { http } from "../util/http";
 const Success = () => {
   const listCheck = JSON.parse(localStorage.getItem("BoughtList"));
 
-  let newCart;
+  if(listCheck !== "undefined"){
+    let newCart;
   newCart = listCheck.map((product) => {
     const { amount, discount, bookID } = product;
     return { amount: amount, discount: discount, bookID: bookID };
@@ -14,6 +15,7 @@ const Success = () => {
   http
     .post("/receipt/setHistory", { cart: newCart })
     .catch((error) => console.log(error));
+  }
   return (
     <div
       className="grid place-items-center w-full lg:h-screen h-full
