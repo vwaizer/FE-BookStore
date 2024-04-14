@@ -51,7 +51,7 @@ const AccountInfo = () => {
         
         newChangedFieldsCount++
             }
-      if (form.getFieldValue("birthday").format("L") !== (getUser.birthday)) {
+      if (form.getFieldValue("birthday") !== (getUser.birthday)) {
         console.log("date");
         console.log(form.getFieldValue("birthday").format("L"),"=",new Date(getUser.birthday).toLocaleDateString());
         newChangedFieldsCount++
@@ -64,7 +64,7 @@ const AccountInfo = () => {
       }
       const changedInfo = {
         ...values,
-        birthday: form.getFieldValue("birthday").format("L"),
+        birthday: form.getFieldValue("birthday"),
       };
       console.log("thông tin sau thay đổi", changedInfo);
      
