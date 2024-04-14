@@ -23,8 +23,8 @@ const Contactpage = () => {
       <div className="contact-page">
         <div>
           <div class="C-container_1">
-            <p class="C_container_title_1">Trang Thông Tin</p>
-            <div style={{display:"flex",flexDirection:"column",justifyContent:"center",border:"1px solid brown",borderRadius:"10px",margin:"auto 10px"}}>
+            <p class="C-container_title_1">Trang Thông Tin</p>
+            <div class="C-sub-container_1">
               <div class="C-column_1">
                 <div class="C-column-title">
                   <p class="C-sub_title">Góp Ý</p>
@@ -32,7 +32,7 @@ const Contactpage = () => {
                 </div>
 
                 <div class="C-sub-column_1">
-                  <div style={{ display: "flex", flexDirection: "row" }}>
+                  <div class="C-sub-column_1_1">
                     <div class="C-sub-column_1_1_1">
                       <ContactProps
                         title="Họ Và Tên"
