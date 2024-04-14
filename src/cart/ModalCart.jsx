@@ -40,7 +40,7 @@ const ModalCart = () => {
           <FaShoppingCart />
         </Button>
         <Modal
-          title="Your Cart"
+          title="Giỏ hàng"
           open={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
