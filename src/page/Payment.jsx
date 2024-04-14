@@ -126,7 +126,7 @@ function Payment() {
   };
   const onCartPayment=async(listItem)=>{
    try {
-    const result=await http.post("/receipt/payment",{items:[...listItem]})
+    const result=await http.post("/receipt/payment",{items:[...listItem,{name:"ship",amount:1,price:19}]})
     console.log("url",result.data.url);
     return result.data.url
    } catch (error) {
