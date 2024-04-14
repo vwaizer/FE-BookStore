@@ -1,5 +1,5 @@
 import React from "react";
-import "./contact-page.css";
+import "./style.css";
 
 import { FaFacebookF, FaTiktok, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
