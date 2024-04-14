@@ -32,7 +32,7 @@ const Contactpage = () => {
                 </div>
 
                 <div class="C-sub-column_1">
-                  <div class="C-sub-column_1_1">
+                  <div style={{display:"flex",flexDirection:"row"}}>
                     <div class="C-sub-column_1_1_1">
                       <ContactProps
                         title="Họ Và Tên"
