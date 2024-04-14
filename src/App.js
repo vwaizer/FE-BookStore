@@ -44,7 +44,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />}></Route>
             <Route path="/sign-in" element={<SignIn />}></Route>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/success" element={<Success/>}></Route>
+             <Route path="/success" element={<Success/>}></Route>
             <Route path="/cancel" element={<Cancel/>}></Route>
             <Route
               path="/nha-sach"
