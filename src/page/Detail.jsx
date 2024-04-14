@@ -37,10 +37,10 @@ function Detail() {
   const [loading, setLoading] = useState(false);
   let timeOut = null;
   useEffect(() => {
-    clearTimeout(timeOut);
+    // clearTimeout(timeOut);
     setLoading(true);
-    timeOut = setTimeout(() => {
-      if (ID !== "undefined") {
+     setTimeout(() => {
+      if (ID !== "undefined" || localStorage.getItem("accessToken")=== "undefined") {
         console.log(`/book/detailBook/${ID}`);
         http
           .get(`/book/detailBook/${ID}`)
@@ -51,6 +51,7 @@ function Detail() {
           .catch((err) => console.log(err));
       }
     }, 1000);
+    
   }, [ID]);
 
   const handleAddToCartClick = async (ID) => {

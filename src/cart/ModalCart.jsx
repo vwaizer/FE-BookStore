@@ -10,10 +10,16 @@ const ModalCart = () => {
   const [productModal, setProductModal] = useState([]);
 
   useEffect(() => {
-    http
+    if(localStorage.getItem("accessToken") !== "undefined"){
+      http
       .get("/receipt/")
       .then((getAddToCart) => setGetAddToCart(getAddToCart.data))
       .catch((err) => {console.log(err);localStorage.removeItem("accessToken");window.location.href="/sign-in"});
+    }
+    else{
+      window.location.href="/sign-in"
+    }
+    
   }, [isModalOpen]);
 
   const showModal = () => {
