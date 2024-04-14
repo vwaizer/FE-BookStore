@@ -40,7 +40,7 @@ function Detail() {
     // clearTimeout(timeOut);
     setLoading(true);
      setTimeout(() => {
-      if (ID !== "undefined" || localStorage.getItem("accessToken")=== "undefined") {
+      if (ID !== "undefined" || localStorage.getItem("accessToken")!== "undefined") {
         console.log(`/book/detailBook/${ID}`);
         http
           .get(`/book/detailBook/${ID}`)
@@ -48,7 +48,10 @@ function Detail() {
             setProduct(Array(product.data));
             setLoading(false);
           })
-          .catch((err) => console.log(err));
+          .catch((err) => window.location.href="/sign-in");
+      }
+      else{
+        window.location.href="/sign-in"
       }
     }, 1000);
     
