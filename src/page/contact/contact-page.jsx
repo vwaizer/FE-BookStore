@@ -22,13 +22,13 @@ const Contactpage = () => {
     <Layout>
       <div className="contact-page">
         <div>
-          <div style={{textAlign:"center",fontWeight:"800",fontSize:"40px",margin:"20px auto",paddingBottom:"45px"}}>
+          <div style={{textAlign:"center",fontWeight:"800",margin:"20px auto",paddingBottom:"45px"}}>
             <p class="C-container_title_1">Trang Thông Tin</p>
             <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",border:"1px solid brown",borderRadius:"10px",margin:"auto 10px"}}>
               <div class="C-column_1">
                 <div style={{paddingTop:"20px"}}>
                   <p class="C-sub_title">Góp Ý</p>
-                  <div class="C-child-box-subtitle_1"></div>
+                  <div style={{width:"131px",backgroundColor:"#000000"}}></div>
                 </div>
 
                 <div class="C-sub-column_1">
@@ -87,7 +87,7 @@ const Contactpage = () => {
               <div class="C-column_3">
                 <div style={{paddingTop:"20px"}}>
                   <p class="C-sub_title">Liên Hệ</p>
-                  <div class="C-child-box-subtitle_1"></div>
+                  <div style={{width:"131px",backgroundColor:"#000000"}}></div>
                 </div>
 
                 <div>
