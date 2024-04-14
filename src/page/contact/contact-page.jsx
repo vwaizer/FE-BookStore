@@ -23,7 +23,7 @@ const Contactpage = () => {
       <div className="contact-page">
         <div>
           <div class="C-container_1">
-            <p class="C-container_title_1">Trang Thông Tin</p>
+            <p class="C_container_title_1">Trang Thông Tin</p>
             <div class="C-sub-container_1">
               <div class="C-column_1">
                 <div class="C-column-title">
