@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { http } from '../../util/http';
 
-const ButtonImport = ({record,method,value}) => {
+const ButtonRefuse = ({record,method,value}) => {
     const[isClicked,setIsClicked]=useState(false)
     const onClickFunc=async(record)=>{
         console.log(record);
@@ -12,8 +12,8 @@ const ButtonImport = ({record,method,value}) => {
           }
           else if(localStorage.getItem("staff")=== "admin"){
             
-            const result=await http.put(`/staff/importedBook/${record._id}`,{status:"Đồng ý"})
-            const addBook=await http.post(`/staff/book`,record)
+            const result=await http.put(`/staff/importedBook/${record._id}`,{status:"Từ Chối"})
+            // const addBook=await http.post(`/staff/book`,record)
             console.log(addBook);
             console.log("result",result);
             setIsClicked(true)
@@ -41,10 +41,10 @@ const ButtonImport = ({record,method,value}) => {
             onClick={()=>onClickFunc(record)}
             
           >
-            Xác nhận
+            Từ Chối
           </button>
         </>
       )
 }
 
-export default ButtonImport
+export default ButtonRefuse

@@ -2,6 +2,9 @@ import { Space, Table, Typography } from "antd";
 import React, { useEffect, useState } from "react";
 import "./brm.css";
 import { http } from "../../util/http";
+import ButtonImport from "./ButtonImport";
+import ButtonRefuse from "./ButtonRefue";
+
 
 const BookRentalManagement = () => {
   const [getHireBook, setGetHireBook] = useState([]);
@@ -87,19 +90,11 @@ const [buttonStatus,setButtonStatus]=useState("")
               console.log(button);
               return (
                 <>
-                  <button
-                    style={{
-                      border: "1px solid #000",
-                      borderRadius: "5px",
-                      width: "100px",
-                      height: "50px",
-                    }}
-                    type="button"
-                    disabled={(buttonStatus === "Đồng ý" || buttonStatus === "Từ chối")?true:false}
-                    onClick={()=>onClickFunc(button._id)}
-                  >
-                    Xác nhận
-                  </button>
+                 <ButtonImport
+                        record={button}
+                        method={setIsClicked}
+                        value={isClicked}
+                        />
                 </>
               );
             },
@@ -111,19 +106,11 @@ const [buttonStatus,setButtonStatus]=useState("")
               console.log(button);
               return (
                 <>
-                  <button
-                    style={{
-                      border: "1px solid #000",
-                      borderRadius: "5px",
-                      width: "100px",
-                      height: "50px",
-                    }}
-                    type="button"
-                    disabled={(buttonStatus === "Đồng ý" || buttonStatus === "Từ chối")?true:false}
-                    onClick={()=>onRefuseFunc(button._id)}
-                  >
-                    Từ chối 
-                  </button>
+                  <ButtonRefuse
+                        record={button}
+                        method={setIsClicked}
+                        value={isClicked}
+                        />
                 </>
               );
             },

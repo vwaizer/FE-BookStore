@@ -7,12 +7,12 @@ const ButtonImport = ({record,method,value}) => {
         console.log(record);
         try {
           if(localStorage.getItem("staff") === "staff"){
-            const result=await http.put(`/staff/importedBook/${record._id}`,{status:"Đợi Admin"})
+            const result=await http.put(`/staff/hiredBook/${record._id}`,{status:"Đợi Admin"})
             console.log(result);
           }
           else if(localStorage.getItem("staff")=== "admin"){
             
-            const result=await http.put(`/staff/importedBook/${record._id}`,{status:"Đồng ý"})
+            const result=await http.put(`/staff/hiredBook/${record._id}`,{status:"Đồng ý"})
             const addBook=await http.post(`/staff/book`,record)
             console.log(addBook);
             console.log("result",result);
