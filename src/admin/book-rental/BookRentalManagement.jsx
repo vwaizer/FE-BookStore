@@ -6,6 +6,7 @@ import { http } from "../../util/http";
 const BookRentalManagement = () => {
   const [getHireBook, setGetHireBook] = useState([]);
 const [isClicked,setIsClicked]=useState(false);
+const [buttonStatus,setButtonStatus]=useState("")
   useEffect(() => {
     http
       .get("/staff/hireBook")
@@ -26,6 +27,7 @@ const [isClicked,setIsClicked]=useState(false);
     try {
       const result=await http.put(`/staff/hiredBook/${id}`,{status:"Đồng ý"})
       console.log(result);
+      setButtonStatus("Đồng ý")
       setIsClicked(!isClicked)
     } catch (error) {
       console.log(error);
@@ -37,6 +39,7 @@ const [isClicked,setIsClicked]=useState(false);
     try {
       const result=await http.put(`/staff/hiredBook/${id}`,{status:"Từ chối"})
       console.log(result);
+      setButtonStatus("Từ chối")
       setIsClicked(!isClicked)
     } catch (error) {
       console.log(error);
@@ -92,7 +95,7 @@ const [isClicked,setIsClicked]=useState(false);
                       height: "50px",
                     }}
                     type="button"
-                    disabled={(button.status === "Đồng ý" || button.status === "Từ chối")?true:false}
+                    disabled={(buttonStatus === "Đồng ý" || buttonStatus === "Từ chối")?true:false}
                     onClick={()=>onClickFunc(button._id)}
                   >
                     Xác nhận
@@ -116,7 +119,7 @@ const [isClicked,setIsClicked]=useState(false);
                       height: "50px",
                     }}
                     type="button"
-                    disabled={(button.status === "Đồng ý" || button.status === "Từ chối")?true:false}
+                    disabled={(buttonStatus === "Đồng ý" || buttonStatus === "Từ chối")?true:false}
                     onClick={()=>onRefuseFunc(button._id)}
                   >
                     Từ chối 
