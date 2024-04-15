@@ -37,7 +37,7 @@ const Bill = () => {
   }, []);
   console.log(getBill);
   return (
-    <Space  direction="vertical">
+    <Space  >
       <h2>Hóa Đơn</h2>
       <Space>
         <OverviewCustom
