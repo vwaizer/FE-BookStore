@@ -10,7 +10,7 @@ const LayoutAdmin = () => {
   return (
     <div className="layout">
       <AdminPage />
-      <Space size={"large"} className="side_pagecontent">
+      <Space size={"large"} style={{display:"flex",flexDirection:"row"}}>
         <SideMenu></SideMenu>
         <PageContent></PageContent>
       </Space>
