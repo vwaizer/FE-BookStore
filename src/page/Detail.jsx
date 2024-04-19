@@ -40,7 +40,7 @@ function Detail() {
     // clearTimeout(timeOut);
     setLoading(true);
      setTimeout(() => {
-      if (ID !== "undefined" || localStorage.getItem("accessToken")!== "undefined") {
+      if ( localStorage.getItem("accessToken")!== undefined) {
         console.log(`/book/detailBook/${ID}`);
         http
           .get(`/book/detailBook/${ID}`)
